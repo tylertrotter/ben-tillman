@@ -139,23 +139,24 @@
 			<section class="stay-informed section-padding wrapper center">
 				<h2>Stay Informed</h2>
 
-				<form name="email-list" netlify>
+				<form name="email-list" netlify-honeypot="phone" netlify>
 
 					<div class="fancy stay-informed-options">
 						<label>
-							<input type="checkbox" checked>
+							<input type="checkbox" checked name="news">
 							<span>News &amp; Updates</span>
 						</label>
 
 						<label>
-							<input type="checkbox">
+							<input type="checkbox" name="volunteer">
 							<span>Volunteer Opportunities</span>
 						</label>
 					</div>
 
-					<input type="text" placeholder="Name">
-					<input type="tel" placeholder="ZIP" class="short-input" maxlength="5">
-					<input type="email" placeholder="Email">
+					<input type="text" name="name" placeholder="Name">
+					<input type="tel" name="phone" placeholder="Phone">
+					<input type="tel" name="ZIP" placeholder="ZIP" class="short-input" maxlength="5">
+					<input type="email" name="email" placeholder="Email">
 
 					<button class="cta">Join List</button>
 				</form>

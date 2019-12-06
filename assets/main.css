@@ -390,6 +390,10 @@ button {
 	font-size: 16px;
 }
 
+.stay-informed [name="phone"] {
+	display: none;
+}
+
 .stay-informed label {
 	margin-left: 1.7em;
 }
