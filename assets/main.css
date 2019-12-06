@@ -1,0 +1,713 @@
+* {
+	box-sizing: border-box;
+}
+
+h1, h2, .c-label {
+	font-family: abril-display, serif;
+	font-weight: 800;
+	font-style: normal;
+	margin: 0 0 1em;
+	line-height: 1.2;
+}
+
+body {
+	margin: 0;
+	font-family: abril-text, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+@media (max-width: 950px) {
+	body {
+		font-size: 15px;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.wrapper {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.wrapper--thin {
+	max-width: 800px;
+}
+
+.section-padding {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+@media (max-width: 400px) {
+	.section-padding {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+.top-section-photo {
+	background: #DEDEDE url('images/benjamin-tillman.jpg') center 13%;
+	background-size: cover;
+	height: 75vh;
+	position: sticky;
+	top: 0;
+	z-index: -1;
+}
+
+.top-section-text {
+	font-size: 4em;
+	color: #FFFFFF;
+	text-shadow: 3px 3px 6px #000000EB;
+	background: transparent linear-gradient(180deg, #00000000 0%, #000000e1 100%) 0% 0% no-repeat padding-box;
+	margin: 0;
+	padding: 1em 0;
+	text-align: center;
+	margin-top: -280px;
+}
+
+@media (max-width: 600px) {
+	.top-section-text {
+		font-size: 3.3em;
+		padding: 1em 1em 1em;
+	}
+}
+
+@media (max-width: 450px) {
+	.top-section-text {
+		font-size: 3em;
+		padding: 2em 1em .7em;
+	}
+}
+
+.content {
+	background: white;
+
+}
+
+@media (min-width: 900px) {
+	.even-columns {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.even-columns > * {
+		width: calc(50% - 2rem);
+	}
+}
+
+@media (min-width: 1200px) {
+	.intro {
+		font-size: 1.33vw;
+	}
+}
+
+@media (min-width: 1500px) {
+	.intro {
+		font-size: 19px;
+	}
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+	.intro {
+		font-size: 2.2vw;
+	}
+}
+
+@media (max-width: 899px) {
+	.even-columns > *:first-child {
+		margin-bottom: 2rem;
+	}
+}
+
+.enlarge {
+	cursor: zoom-in;
+}
+
+.glide {
+	margin: 4rem 0 5rem;
+}
+
+@media (max-width: 899px) {
+	.glide {
+		margin-top: 8vw;
+	}
+}
+
+.no-js .glide__bullets {
+	display: none;
+}
+
+.glide__bullets {
+	text-align: center;
+}
+
+.glide__bullet {
+	background: #3f3f3f;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	margin: 0 .5em;
+	cursor: pointer;
+	outline: 0;
+	transition: .4s;
+}
+
+.glide__bullet--active {
+	background: white;
+	width: 2em;
+	height: 2em;
+	border: 3px solid #3f3f3f;
+}
+
+hr {
+	border: 0;
+	border-top: 3px solid #3f3f3f;
+	border-bottom: 1px solid #3f3f3f;
+	height: 6px;
+}
+
+blockquote {
+	font-size: 19px;
+	padding: 0 8vw;
+	margin: 0 0 1rem;
+	background: url('images/ldquo.svg') no-repeat 0 .3em,  url('images/rdquo.svg') no-repeat 100% .3em;
+	background-size: 6vw;
+}
+
+@media (min-width: 680px) {
+	blockquote {
+		font-size: 2.6vw;
+	}
+}
+
+@media (min-width: 1500px) {
+	blockquote {
+		font-size: 40px;
+	}
+}
+
+cite {
+	margin-left: 8vw;
+}
+
+cite:before {
+	content: '—'
+}
+
+@media (max-width: 600px) {
+	blockquote {
+		background: url('images/ldquo.svg') no-repeat center top;
+		background-size: 4em;
+		padding: 3.5em 0 0;
+	}
+
+	cite {
+		margin-left: 0;
+	}
+}
+
+.quotes {
+	list-style: none;
+	padding: 0;
+}
+
+.big-text {
+	font-size: 2.5em;
+}
+
+@media (max-width: 345px) {
+	.big-text {
+		font-size: 2.3em;
+	}
+}
+
+button {
+	font-family: abril-text, serif;
+}
+
+.cta,
+[type="submit"] {
+	display: inline-block;
+	background: transparent linear-gradient(180deg, #A90000 0%, #F10000 100%) 0% 0% no-repeat padding-box;
+	box-shadow: 2px 2px 4px rgba(0, 3, 27, .3);
+	border: 2px solid #FFFFFF;
+	color: white;
+	font-size: 16px;
+	padding: 1em;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.center {
+	text-align: center;
+}
+
+.tillman-statue {
+	background-color: rgb(0, 8, 78);
+	background-size: cover;
+	padding: 12vw 0 22vw;
+	min-height: 70vh;
+}
+
+.no-js .tillman-statue {
+	background-image: url('images/benjamin-tillman-statue.jpg');
+}
+
+.tillman-statue.load-statue {
+	background-image: url('images/benjamin-tillman-statue.jpg');
+}
+
+.tillman-statue-text {
+	width: 30%;
+	max-width: 380px;
+	min-width: 250px;
+	background-color: rgba(0, 8, 78, 0.7);
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	color: white;
+}
+
+@media (min-width: 1100px) {
+	.tillman-statue-text {
+		font-size: 1.5vw;
+	}
+}
+
+@media (min-width: 1500px) {
+	.tillman-statue-text {
+		font-size: 22px;
+	}
+}
+
+@media (min-width: 610px) and (max-width: 900px) {
+	.tillman-statue-text {
+		width: 43%;
+		margin-left: auto;
+		margin-right: 2rem;
+		font-size: 2.7vw;
+		padding: 1vw 4vw;
+	}
+}
+
+@media (max-width: 609px) {
+	.tillman-statue-text {
+		width: 100%;
+		max-width: 100%;
+		margin: 10vh auto;
+		padding: .1em 2rem;
+		font-size: 16px;
+	}
+}
+
+.bottom {
+	background:rgba(0, 8, 78, 1) linear-gradient(180deg, #000C7500 50%, #00109C 100%) 0% 0% no-repeat padding-box;
+	color: white;
+}
+
+.bottom a:not(.cta) {
+	color: #C4CBFF;
+	text-decoration: none;
+}
+
+.bottom a:not(.cta):hover {
+	color: white;
+	text-decoration: underline;
+}
+
+.no-js .poll-cta {
+	display: none;
+}
+
+.learn-more nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.learn-more nav > * {
+	width: calc(25% - 1rem);
+}
+
+@media (max-width: 830px) {
+	.learn-more nav > * {
+		width: calc(50% - 1rem);
+	}
+}
+
+@media (max-width: 550px) {
+	.learn-more nav > * {
+		width: 100%;
+	}
+}
+
+.learn-more ul {
+	padding-left: 1em;
+	line-height: 1.4;
+	margin-bottom: 2rem;
+}
+
+.learn-more li + li {
+	margin-top: .75em;
+}
+
+.divider-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.divider-header:before,
+.divider-header:after {
+	content: '';
+	width: calc(50% - 4em);
+	height: 3px;
+	border-bottom: 1px solid #4852A3;
+	border-top: 3px solid #4852A3;
+}
+
+.learn-more hr {
+	border-color: #4852A3;
+	margin-top: 1rem;
+}
+
+
+.dum-spiro-spero {
+	background: rgba(0, 8, 78, 1);
+	padding: 1em;
+}
+
+[type="text"],
+[type="tel"],
+[type="email"] {
+	padding: 1em;
+	font-size: 16px;
+}
+
+.stay-informed label {
+	margin-left: 1.7em;
+}
+
+.stay-informed label + label {
+	margin-left: 4em;
+}
+
+@media (max-width: 470px) {
+	.stay-informed label {
+		display: block;
+		margin-left: 1.7em !important;
+		text-align: left;
+		margin-bottom: .5em;
+	}
+}
+
+.stay-informed-options {
+	margin-bottom: 1em;
+}
+
+.stay-informed input[type="checkbox"]:not(:checked) + span:before  {
+	border-color: white !important;
+}
+.stay-informed input[type="checkbox"] + span:before  {
+	outline: 1px solid white;
+}
+
+.stay-informed input {
+	max-width: 25%;
+}
+
+.short-input {
+	width: 5em;
+}
+
+.stay-informed input {
+		margin-right: .5em;
+}
+
+@media (max-width: 690px) {
+	.stay-informed [type="text"],
+	.stay-informed [type="tel"],
+	.stay-informed [type="email"],
+	.stay-informed button {
+		padding: .5em;
+	}
+}
+
+@media (max-width: 560px) {
+	.stay-informed [type="text"],
+	.stay-informed [type="tel"],
+	.stay-informed [type="email"],
+	.stay-informed button {
+		max-width: 100%;
+		width: 100%;
+		margin: .5em 0;
+	}
+}
+
+[id="hamburg-cartoon"] .modal-container {
+	background: white url('images/harpers-weekly-hamburg-riot-cartoon-small.png') no-repeat center center;
+	background-size: contain;
+}
+
+[data-modal="hamburg-cartoon"] [id="hamburg-cartoon"] {
+	display: flex;
+	left: 0;
+	right: 0;
+	opacity: 1;
+}
+
+[data-modal="hamburg-cartoon"] [id="hamburg-cartoon"] .modal-content {
+	display: flex;
+	align-items: center;
+	left: 0;
+	right: 0;
+	opacity: 1;
+}
+
+
+body[data-modal] {
+	overflow: hidden;
+}
+
+@media (min-width: 1100px) {
+	body[data-modal] {
+		margin-right: 18px;
+	}
+}
+
+body[data-modal="poll"] [id="poll"] {
+	display: flex;
+	left: 0;
+	right: 0;
+	opacity: 1;
+}
+
+body[data-modal] .modal-background{
+	opacity: 1;
+	left: 0;
+}
+
+.modal {
+	opacity: 0;
+	display: flex;
+	background-color: white;
+	margin: 4vh auto;
+	overflow: auto;
+	height: 92vh;
+	width: 100%;
+
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: -100%;
+	
+	bottom: 0;
+	transition: opacity .5s;
+}
+
+.modal-content {
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.modal img {
+	max-height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.modal-background {
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	bottom: 0;
+	background: rgba(0, 0, 0, .8);
+}
+
+.close-button {
+	position: absolute;
+	right: 0;
+	font-size: 2em;
+	padding: .5em;
+	line-height: .7;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+@media (orientation: landscape) {
+  .modal {
+		max-width: 85vw;
+	}
+}
+
+@media (orientation: portrait) {
+  .modal {
+		height: 100vh;
+		width: 100vw;
+		margin: 0;
+	}
+}
+
+@media (orientation: landscape) {
+	.modal[id="poll"] {
+		max-width: 670px;
+	}
+}
+
+#poll .cognito .c-forms-form {
+	outline: 0;
+	font-size: 18px;
+	max-width: 560px;
+	margin: 0 auto;
+}
+
+#poll .c-label {
+	color: rgba(0, 8, 78, 1);
+	font-size: 1.3em;
+	padding: 0;
+}
+
+#poll .cognito .c-action {
+	width: 100%;
+	float: none;
+}
+
+#poll .cognito [type="submit"] {
+	float: none;
+	width: 100%;
+}
+
+#poll .c-choice-option {
+	position: relative;
+	margin-left: 1em;
+	margin-bottom: .4em;
+}
+
+#poll .c-choice-option label {
+	text-indent: 0;
+}
+
+.fancy [type="radio"],
+.fancy [type="checkbox"] {
+	display: none;
+}
+
+.fancy [type="radio"] + span,
+.fancy [type="checkbox"] + span {
+	position: relative;
+}
+
+.fancy [type="radio"] + span:before,
+.fancy [type="checkbox"] + span:before {
+	content: '';
+	background: white;
+	display: block;
+	width: .8em;
+	height: .8em;
+	border: 2px solid #999;
+	position: absolute;
+	top: .22em;
+	left: -1.5em;
+}
+
+.fancy [type="radio"] + span:before {
+	border-radius: 50%;
+}
+
+.fancy [type="radio"]:checked + span:before {
+	background: white;
+	border: 6px solid #A90000;
+	width: calc(.8em - 8px);
+	height: calc(.8em - 8px);
+}
+
+.fancy [type="checkbox"]:checked + span:before {
+	background: #A90000;
+	border-color: #A90000;
+}
+
+.fancy [type="checkbox"]:checked + span:after {
+	content: '';
+	width: .25em;
+	height: .6em;
+	border-right: 2px solid white;
+	border-bottom: 2px solid white;
+	position: absolute;
+	top: .3em;
+	left: -1.15em;
+	transform: rotate(45deg);
+}
+
+#poll .c-choice-fillin label {
+	padding-left: 0;
+}
+
+#poll .c-choice-fillin input {
+	width: 100%;
+	max-width: calc(100% - 2px);
+}
+
+#poll input {
+	border: 2px solid #999;
+}
+
+#poll [data-field="ZIPCode"] input {
+	width: 6em;
+}
+
+#poll .c-helptext {
+	font-size: 14px;
+	padding-top: 0;
+	padding-left: 1.8em;
+}
+
+#poll .c-forms-form-title h2 {
+	font-size: 1.9em;
+	text-align: center;
+	padding-bottom: .75em;
+	border-bottom: 3px solid #3f3f3f;
+	margin-bottom: 2px;
+}
+
+#poll .c-forms-form-title {
+	padding: 0;
+	border-bottom: 1px solid #3f3f3f;
+	margin-bottom: 1.5em;
+}
+
+.js .tillman-statue {
+	filter: grayscale(100%);
+	transition: 8s;
+}
+
+.js .tillman-statue.reveal {
+	filter: grayscale(0%);
+}
+
+.js .tillman-statue-text p:last-child {
+	opacity: 0;
+	transition: opacity 2s 3s;
+}
+
+.js .reveal .tillman-statue-text p:last-child {
+	opacity: 1;
+}
+
+/* not home page */
+
+article header {
+	text-align: center;
+}
+
+article header h1 {
+	font-size: 2.5em;
+}
