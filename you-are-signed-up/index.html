@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
 
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -11,7 +11,9 @@
 
 		gtag('config', 'UA-154922974-1');
 	</script>
-	<title>Tillman Statue Opinion Poll</title>
+	<script>
+		document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'') + ' js';
+	</script>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -25,28 +27,36 @@
   <link rel="apple-touch-icon" href="icon.png">
 	<link rel="stylesheet" href="../assets/main.css">
 	<link rel="stylesheet" href="https://use.typekit.net/qav4cua.css">
+	
+	
+  <title>Your are Signed Up - Benjamin Tillman</title>
 
 </head>
 
-<div id="poll" class="fancy full-page-form">
-	<div class="cognito">
-		<script src="https://services.cognitoforms.com/s/XBMZqdgGxEOQELifmMBd4Q"></script>
-		<script>Cognito.load("forms", { id: "64" });</script>
-	</div>
-</div>
+<body>
+	<header class="home">
+		<a href="/">
+			<img src="../assets/images/home.svg" alt="home" /> Who Was Benjamin Tillman?
+		</a>
+	</header>
 
-<script>
-	setTimeout(function(){
-		if(Cognito && localStorage.getItem('submittedPoll') == 'true'){
-			var input = document.querySelector('[data-field="PreviouslySubmitted"]').querySelector('input');
-			input.focus();
-			input.value = 'true';
-			Cognito.Forms.model.entry._PreviouslySubmitted = 'true';
-		}
-		document.getElementById('c-submit-button').addEventListener('click', function(){
-			localStorage.setItem('submittedPoll', true);
-		});
-	}, 2000)
-</script>
+	<article class="wrapper wrapper--thin">
+		<header>
+			<h1>You're Signed Up!</h1>
+		</header>
+
+		<p>You're signed up to get emails, but have you already taken the poll? It'll take you less than a minute unless you really over think it.</p>
+
+		<div class="center">
+			<a href="/poll" class="cta" data-modal="poll">Take the opinion poll</a>
+		</div>
+	</article>
+
+
+
+
+  <script src="../assets/scripts.js"></script>
+
+</body>
 
 </html>

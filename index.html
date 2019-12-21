@@ -2,6 +2,15 @@
 <html class="no-js" lang="en">
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154922974-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-154922974-1');
+	</script>
 	<script>
 		document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'') + ' js';
 	</script>
@@ -17,7 +26,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
@@ -44,7 +52,7 @@
 				</div>
 
 				<div>
-					<img id="hamburg" src="assets/images/harpers-weekly-hamburg-riot-cartoon-small.png" alt="Thomas Nast cartoon in Harper's Weekly which decries the Hamburg Massacre of 1876."/>
+					<img id="hamburg" src="/assets/images/harpers-weekly-hamburg-riot-cartoon-small.png" alt="Thomas Nast cartoon in Harper's Weekly which decries the Hamburg Massacre of 1876."/>
 				</div>
 			</div>
 		</section>
@@ -83,34 +91,32 @@
 			</div>
 		</section>
 
-		<section class="bottom">
+		<section id="bottom" class="bottom">
 
 			<section class="section-padding center wrapper poll-cta">
 				<h2 class="big-text">What should be done about the Tillman&nbsp;Statue?</h2>
-				<a class="cta" data-modal="poll">Take the opinion poll</a>
+				<a href="/poll" class="cta" data-modal="poll">Take the opinion poll</a>
 			</section>
 
 			<section class="wrapper section-padding learn-more">
 				<h2 class="center divider-header">Learn More</h2>
 				<nav>
 					<div>
-						<h3>Short Histories</h3>
+						<h3>About Ben Tillman</h3>
 						<ul>
+							<li><a href="/the-trouble-with-tillman">Original Essay by Will Moredock</a></li>
 							<li><a target="_blank" href="https://en.wikipedia.org/wiki/Benjamin_Tillman">Tillman’s Biography</a></li>
-							<!-- <li>Reconstruction</li> -->
-							<li>The Terror Campaign of 1876</li>
-							<!-- <li>Red Shirts</li> -->
-							<!-- <li>1895 SC Constitution</li> -->
 							<li><a target="_blank" href="https://en.wikiquote.org/wiki/Benjamin_Tillman">Quotes of Ben Tillman</a></li>
 						</ul>
 					</div>
 
 					<div>
-						<h3>Primary Sources</h3>
+						<h3>Terror of 1876</h3>
 						<ul>
-							<li><i>South Carolina in 1876.</i> Report of the official U.S. Senate investigation</li>
-							<li><a target="_blank" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015079003128&view=1up&seq=3"><i>The Struggles of 1876</i></a></li>
-							<!-- <li>Senate Speeches of Ben Tillman</li> -->
+							<li><a href="/terror-of-1876">The Terror Campaign of 1876</a></li>
+							<!-- <li><a href="https://books.google.com/books?id=D7pF8F86L3sC&pg=PR9#v=onepage&q&f=false"><i>South Carolina in 1876.</i> Report of the official U.S. Senate investigation</a></li> -->
+							<li><a target="_blank" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015079003128&view=1up&seq=3"><i>The Struggles of 1876</i>, by Ben Tillman</a></li>
+							<li><a href="/1900-senate-speech">1900 Senate Speech of Ben Tillman</a></li>
 						</ul>
 					</div>
 
@@ -119,17 +125,15 @@
 						<ul>
 							<li><a target="_blank" href="https://www.historiccolumbia.org/online-tours/state-house-monuments-tour/benjamin-ryan-tillman-monument">The Origin of the Tillman Statue</a></li>
 							<li><a target="_blank" href="https://www.washingtonpost.com/news/morning-mix/wp/2015/07/09/should-this-controversial-s-c-governors-statue-be-included-in-the-debate-over-confederate-symbols-on-statehouse-grounds/">Past efforts to remove the statue</a></li>
-							<li><a href="/the-trouble-with-tillman">Original Essay by Will Moredock</a></li>
 						</ul>
 					</div>
 
 					<div>
 						<h3>How to Make a Change</h3>
 						<ul>
-							<li>How to alter or remove the Tillman Statue</li>
+							<li><a href="/legislative-fix-to-the-tillman-problem">Legislative Fix to the Tillman Problem</a></li>
 							<!-- <li>Where each SC Legislator Stands</li> -->
-							<!-- <li>Public Opinion in South Carolina</li> -->
-							<li>How to Help</li>
+							<li><a href="/how-to-help">How to Help</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -137,9 +141,9 @@
 			</section>
 
 			<section class="stay-informed section-padding wrapper center">
-				<h2>Stay Informed</h2>
+				<h2 id="email">Stay Informed</h2 id="email">
 
-				<form name="email-list" netlify-honeypot="phone" netlify>
+				<form name="email-list"  netlify-honeypot="phone" netlify>
 
 					<div class="fancy stay-informed-options">
 						<label>
@@ -155,14 +159,30 @@
 
 					<input type="text" name="name" placeholder="Name">
 					<input type="tel" name="phone" placeholder="Phone">
-					<input type="tel" name="ZIP" placeholder="ZIP" class="short-input" maxlength="5">
-					<input type="email" name="email" placeholder="Email">
+					<input type="tel" name="ZIP" placeholder="ZIP" class="short-input" maxlength="5" pattern="[0-9]{5}" required>
+					<input type="email" name="email" placeholder="Email" required>
 
 					<button class="cta">Join List</button>
 				</form>
 			</section>
 
-			<div class="dum-spiro-spero center"><i>Dum Spiro Spero</i></div>
+			<div class="footer-contact center">
+					<!-- <a href="https://example.com/#facebook"><img src="/assets/images/facebook.svg"></a> -->
+					<a href="https://twitter.com/downwithtillman"><img src="/assets/images/twitter.svg"></a>
+					<a href="mailto:web@downwithtillman.com">
+						<img src="/assets/images/email.svg"/>
+					</a>
+				</div>
+
+			<div class="dum-spiro-spero center">
+				
+				<i>Dum Spiro Spero</i>
+			</div>
+
+			<div class="social-share">
+				<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdownwithtillman.com" class="fb-share" id="fb-share"></a>
+				<a href="http://twitter.com/share?text=Benjamin Tillman - Governor, Senator, Terrorist %23downwithtillman&url='+url" class="tw-share" id="tw-share"></a>
+			</div>
 		</section>
 		
 	</div>
@@ -184,14 +204,10 @@
 	<div class="modal-background"></div>
 	
 	
-  <!-- <script src="assets/main.js"></script> -->
+  <!-- <script src="/assets/main.js"></script> -->
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-	<script src="https://www.google-analytics.com/analytics.js" async></script>
+
 	
 	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 	<script>
@@ -231,19 +247,25 @@
 		var modals = document.querySelectorAll('[data-modal]');
 		for(var i = 0; i < modals.length; i++){
 			modals[i].addEventListener('click', function(e){
+				e.preventDefault();
+				history.pushState({}, '', '#'+e.target.getAttribute('data-modal'));
 				document.querySelector('body').setAttribute('data-modal', e.target.getAttribute('data-modal'));
 			});
 		}
 
-		document.querySelector('.modal-background').addEventListener('click', function(){
-			document.querySelector('body').removeAttribute('data-modal');
-		});
+		document.querySelector('.modal-background').addEventListener('click', closeModal);
 
 		var closeButtons = document.querySelectorAll('.close-button');
 		for(var i = 0; i < closeButtons.length; i++){
-			closeButtons[i].addEventListener('click', function(){
+			closeButtons[i].addEventListener('click', closeModal);
+
+		}
+
+		window.addEventListener('hashchange', closeModal);
+
+		function closeModal(){
 			document.querySelector('body').removeAttribute('data-modal');
-		});
+			history.pushState('', '', window.location.pathname);
 		}
 
 
@@ -286,6 +308,18 @@
 						var script2 = document.createElement('script');
 						script2.innerHTML = 'Cognito.load("forms", { id: "64" });';
 						document.querySelector('.cognito').appendChild(script2);
+						setTimeout(function(){
+							if(Cognito && localStorage.getItem('submittedPoll') == 'true'){
+								var input = document.querySelector('[data-field="PreviouslySubmitted"]').querySelector('input');
+								input.focus();
+								input.value = 'true';
+								Cognito.Forms.model.entry._PreviouslySubmitted = 'true';
+							}
+							document.getElementById('c-submit-button').addEventListener('click', function(){
+								localStorage.setItem('submittedPoll', true);
+							});
+						}, 2000)
+						
 					}else{
 						setTimeout(function(){
 							loadCognito();
@@ -297,6 +331,7 @@
 			
 		
 	</script>
+	<script src="/assets/scripts.js"></script>
 </body>
 
 </html>

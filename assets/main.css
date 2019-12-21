@@ -10,6 +10,14 @@ h1, h2, .c-label {
 	line-height: 1.2;
 }
 
+h2, h3, h4, h5, h6 {
+	margin-top: 1.5em;
+	margin-bottom: .5em;
+}
+
+a { color: #00109C; }
+a:visited { color: #A90000;}
+
 body {
 	margin: 0;
 	font-family: abril-text, serif;
@@ -32,7 +40,7 @@ img {
 .wrapper {
 	max-width: 1300px;
 	margin: 0 auto;
-	padding: 0 2rem;
+	padding: 0 2.5rem;
 }
 
 .wrapper--thin {
@@ -173,7 +181,7 @@ hr {
 	height: 6px;
 }
 
-blockquote {
+.glide blockquote {
 	font-size: 19px;
 	padding: 0 8vw;
 	margin: 0 0 1rem;
@@ -182,13 +190,13 @@ blockquote {
 }
 
 @media (min-width: 680px) {
-	blockquote {
+	.glide blockquote {
 		font-size: 2.6vw;
 	}
 }
 
 @media (min-width: 1500px) {
-	blockquote {
+	.glide blockquote {
 		font-size: 40px;
 	}
 }
@@ -243,6 +251,10 @@ button {
 	padding: 1em;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.cta:visited {
+	color: white;
 }
 
 .center {
@@ -307,6 +319,7 @@ button {
 }
 
 .bottom {
+	position: relative;
 	background:rgba(0, 8, 78, 1) linear-gradient(180deg, #000C7500 50%, #00109C 100%) 0% 0% no-repeat padding-box;
 	color: white;
 }
@@ -388,6 +401,11 @@ button {
 [type="email"] {
 	padding: 1em;
 	font-size: 16px;
+}
+
+.stay-informed {
+	padding-right: 4.5em;
+	padding-left: 4.5em;
 }
 
 .stay-informed [name="phone"] {
@@ -567,6 +585,14 @@ body[data-modal] .modal-background{
 	}
 }
 
+.full-page-form {
+	margin-top: 3em;
+}
+
+#poll [data-field="PreviouslySubmitted"] {
+	display: none;
+}
+
 #poll .cognito .c-forms-form {
 	outline: 0;
 	font-size: 18px;
@@ -706,6 +732,46 @@ body[data-modal] .modal-background{
 	opacity: 1;
 }
 
+.social-share {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	transform: translateX(5em);
+	transition: transform .4s;
+}
+
+.social-share-revealed .social-share {
+	transform: translateX(0);
+}
+
+.social-share a {
+	display: block;
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	margin: 1em;
+	box-shadow: 2px 2px 2px rgba(0, 8, 78, .3);
+}
+
+.fb-share {
+	background: #1778f2 url('./images/facebook.svg') no-repeat center center;
+	background-size: 60%;
+}
+
+.tw-share {
+	background: #1da1f2 url('./images/twitter.svg') no-repeat center center;
+	background-size: 55%;
+
+}
+
+.footer-contact img {
+	width: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: .75em;
+	margin-bottom: 1em;	
+}
+
 /* not home page */
 
 article header {
@@ -714,4 +780,83 @@ article header {
 
 article header h1 {
 	font-size: 2.5em;
+}
+
+article.wrapper {
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+}
+
+.home {
+	text-indent: 1.2em;
+	border-bottom: 1px solid #eee;
+}
+
+.home img {
+	position: fixed;
+	left: .2em;
+	width: 1.8em;
+	vertical-align: middle;
+}
+
+.home a {
+	text-decoration: none;
+	display: inline-block;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	color: rgba(0, 8, 78, 1);
+}
+
+.article-intro {
+	background: #efefef;
+	font-size: .875em;
+	padding: 2em;
+	margin-bottom: 3em;
+}
+
+article hr {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.notes {
+	font-size: .875em;
+}
+
+.notes li {
+	margin-bottom: .75em;
+	line-height: 1.3;
+}
+
+[id^="text-"] sup:before {
+	content: '[';
+}
+
+[id^="text-"] sup:after {
+	content: ']';
+}
+
+[id^="note-"] {
+	margin-right: .4em;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: .875em;
+}
+
+[id^="note-"]:before {
+	content: '^'
+}
+
+figure {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+figcaption {
+	font-weight: bold;
+	font-size: .875em;
+}
+
+figcaption:first-child {
+	border-bottom: 1px solid #ddd;
 }
