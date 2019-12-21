@@ -626,6 +626,18 @@ body[data-modal] .modal-background{
 	text-indent: 0;
 }
 
+#poll .cognito.c-sml .c-action {
+	margin-left: 0;
+}
+
+#poll .cognito .c-editor {
+	padding: 0;
+}
+
+#poll .cognito .c-button {
+	margin: 0;
+}
+
 .fancy [type="radio"],
 .fancy [type="checkbox"] {
 	display: none;
