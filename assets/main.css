@@ -801,7 +801,8 @@ article.wrapper {
 
 .home {
 	text-indent: 1.2em;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #ccc;
+	background: #efefef;
 }
 
 .home img {
