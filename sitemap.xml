@@ -1,0 +1,41 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://downwithtillman.com/</loc>
+  <lastmod>2019-12-31T21:11:11+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://downwithtillman.com/the-trouble-with-tillman/</loc>
+  <lastmod>2019-12-31T21:11:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://downwithtillman.com/terror-of-1876/</loc>
+  <lastmod>2019-12-31T21:11:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://downwithtillman.com/1900-senate-speech/</loc>
+  <lastmod>2019-12-31T21:11:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://downwithtillman.com/legislative-fix-to-the-tillman-problem/</loc>
+  <lastmod>2019-12-31T21:11:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://downwithtillman.com/how-to-help/</loc>
+  <lastmod>2019-12-31T21:11:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
