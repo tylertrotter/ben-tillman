@@ -595,7 +595,8 @@ body[data-modal] .modal-background{
 	display: none;
 }
 
-#poll .cognito .c-forms-form {
+#poll .cognito .c-forms-form,
+.form-wrapper {
 	outline: 0;
 	font-size: 18px;
 	max-width: 560px;
@@ -633,7 +634,7 @@ body[data-modal] .modal-background{
 }
 
 #poll .cognito .c-editor {
-	padding: 0;
+	padding-left: 0;
 }
 
 #poll .cognito .c-button {
@@ -700,7 +701,8 @@ body[data-modal] .modal-background{
 	max-width: calc(100% - 2px);
 }
 
-#poll input {
+#poll input,
+#poll textarea {
 	border: 2px solid #999;
 }
 
