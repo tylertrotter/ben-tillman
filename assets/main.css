@@ -641,6 +641,16 @@ body[data-modal] .modal-background{
 	margin: 0 0 2em;
 }
 
+#poll input,
+#poll textarea {
+	font-family: abril-text, serif;
+	font-weight: 400;
+}
+
+#poll textarea {
+	padding: 12px;
+}
+
 .fancy [type="radio"],
 .fancy [type="checkbox"] {
 	display: none;
