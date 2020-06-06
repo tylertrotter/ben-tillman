@@ -185,8 +185,8 @@ hr {
 
 .glide blockquote {
 	font-size: 19px;
-	padding: 0 8vw;
-	margin: 0 0 1rem;
+	padding: 0 8vw 1rem;
+	margin: 0;
 	background: url('images/ldquo.svg') no-repeat 0 .3em,  url('images/rdquo.svg') no-repeat 100% .3em;
 	background-size: 6vw;
 }
@@ -226,6 +226,10 @@ cite:before {
 .quotes {
 	list-style: none;
 	padding: 0;
+}
+
+.positive-quote blockquote {
+	font-size: 2em;
 }
 
 .big-text {
@@ -405,44 +409,42 @@ button {
 	font-size: 16px;
 }
 
-.stay-informed {
-	padding-right: 4.5em;
-	padding-left: 4.5em;
+.interest-form {
+	max-width: 810px;
+	/* padding-right: 4.5em;
+	padding-left: 4.5em; */
 }
 
-.stay-informed [name="phone"] {
-	display: none;
+.interest-form form {
+	text-align: center;
 }
 
-.stay-informed label {
-	margin-left: 1.7em;
-}
-
-.stay-informed label + label {
-	margin-left: 4em;
-}
-
-@media (max-width: 470px) {
-	.stay-informed label {
-		display: block;
-		margin-left: 1.7em !important;
-		text-align: left;
-		margin-bottom: .5em;
+@media (min-width: 450px) {
+	.interest-form form {
+		background: rgba(0, 16, 156, .5);
+		padding: 1em 2em 2em;
 	}
 }
 
-.stay-informed-options {
+.m {
 	margin-bottom: 1em;
 }
 
-.stay-informed input[type="checkbox"]:not(:checked) + span:before  {
-	border-color: white !important;
-}
-.stay-informed input[type="checkbox"] + span:before  {
-	outline: 1px solid white;
+.interest-form [name="phone"] {
+	display: none;
 }
 
-.stay-informed input {
+.interest-form [type="range"] {
+	width: calc(100% - 100px);
+	min-width: 100px;
+	max-width: 300px;
+}
+
+input[type="range" i] {
+	color: white;
+}
+
+.interest-form input:not([type="range"]) {
 	max-width: 25%;
 }
 
@@ -450,26 +452,26 @@ button {
 	width: 5em;
 }
 
-.stay-informed input {
+.interest-form input {
 		margin-right: .5em;
 }
 
 @media (max-width: 690px) {
-	.stay-informed [type="text"],
-	.stay-informed [type="tel"],
-	.stay-informed [type="email"],
-	.stay-informed button {
+	.interest-form [type="text"],
+	.interest-form [type="tel"],
+	.interest-form [type="email"],
+	.interest-form button {
 		padding: .5em;
 	}
 }
 
 @media (max-width: 560px) {
-	.stay-informed [type="text"],
-	.stay-informed [type="tel"],
-	.stay-informed [type="email"],
-	.stay-informed button {
-		max-width: 100%;
-		width: 100%;
+	.interest-form [type="text"],
+	.interest-form [type="tel"],
+	.interest-form [type="email"],
+	.interest-form button {
+		max-width: 100% !important;
+		width: 100% !important;
 		margin: .5em 0;
 	}
 }

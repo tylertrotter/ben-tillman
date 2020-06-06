@@ -131,9 +131,59 @@
 
 		<section id="bottom" class="bottom">
 
-			<section class="section-padding center wrapper poll-cta">
-				<h2 class="big-text">What should be done about the Tillman&nbsp;Statue?</h2>
-				<a href="/poll" class="cta" data-modal="poll">Take the opinion poll</a>
+			<section class="interest-form section-padding wrapper">
+				<h2 id="new-monument" class="big-text" style="padding-top: 16px;">Remembering Reconstruction's Victims</h2>
+
+				<p>During Reconstruction, events such as the Hamburg Massacre were common yet are poorly remembered today. Tillman is allowed to stand proud with no reminder of his crimes in sight. His statue's plaque, of course, makes no mention of his terrorism.</p>
+
+				<h3>A New Monument</h3>
+
+				<p>Let’s come together as a state and erect a statue memorializing our murdered citizens during Reconstruction. If you are interested in helping, sign the petition indicating about how much money you would be willing to donate. You'll only be emailed with a donation solicitation if there's significant interest in this project.</p>
+
+				<p><a href="reconstruction-monument">Learn more about the project.</a></p>
+
+				<form name="email-list" action="/you-are-signed-up" netlify-honeypot="phone" netlify>
+					<h3>Indicate Your Interest</h3>
+					<div class="m">
+						<input type="text" name="name" placeholder="Name">
+						<input type="tel" name="phone" placeholder="Phone">
+						<input type="tel" name="ZIP" placeholder="ZIP" class="short-input" maxlength="5" pattern="[0-9]{5}" required>
+						<input type="email" name="email" placeholder="Email" required>
+					</div>
+					
+					<div class="m">
+						<div><label>Approximate amount I'm willing&nbsp;to&nbsp;donate</label></div>
+						$1 <input type="range" min="1" max="100" value="1" name="donation" list="ticks" class="m" /> $100
+						<datalist id="ticks">
+							<option value="1">1</option>
+							<option value="10">10</option>
+							<option value="20">20</option>
+							<option value="30">30</option>
+							<option value="40">40</option>
+							<option value="50">50</option>
+							<option value="60">60</option>
+							<option value="70">70</option>
+							<option value="80">80</option>
+							<option value="90">90</option>
+							<option value="100">100</option>
+						</datalist>
+						<div class="more-100 m" style="display: none;">
+						<label><input type="checkbox" name="more-than-100">I'm willing to donate more than $100</label>
+						</div>
+						<script>
+						const donation = document.querySelector('[name="donation"]');
+						const more = document.querySelector('.more-100');
+						donation.addEventListener("change", function(){
+							if(+donation.value < 100)
+								more.style.display = 'none';
+							else
+								more.style.display = 'block';
+
+						});
+						</script>
+					</div>
+					<button class="cta">Submit</button>
+				</form>
 			</section>
 
 			<section class="wrapper section-padding learn-more">
@@ -149,12 +199,13 @@
 					</div>
 
 					<div>
-						<h3>Terror of 1876</h3>
+						<h3>Terror of 1876 &amp; Beyond</h3>
 						<ul>
 							<li><a href="/terror-of-1876">The Terror Campaign of 1876</a></li>
 							<!-- <li><a href="https://books.google.com/books?id=D7pF8F86L3sC&pg=PR9#v=onepage&q&f=false"><i>South Carolina in 1876.</i> Report of the official U.S. Senate investigation</a></li> -->
-							<li><a target="_blank" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015079003128&view=1up&seq=3"><i>The Struggles of 1876</i>, by Ben Tillman</a></li>
+							<!-- <li><a target="_blank" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015079003128&view=1up&seq=3"><i>The Struggles of 1876</i>, by Ben Tillman</a></li> -->
 							<li><a href="/1900-senate-speech">1900 Senate Speech of Ben Tillman</a></li>
+							<li><a href="https://www.goodreads.com/book/show/347449.State_of_Rebellion"><i>State of Rebellion: Reconstruction in South Carolina</i></a></li>
 						</ul>
 					</div>
 
@@ -169,40 +220,17 @@
 					<div>
 						<h3>How to Make a Change</h3>
 						<ul>
+							<li><a href="reconstruction-monument">Help Raise Money for a New Reconstruction Monument</a></li>
 							<li><a href="/legislative-fix-to-the-tillman-problem">Legislative Fix to the Tillman Problem</a></li>
 							<!-- <li>Where each SC Legislator Stands</li> -->
-							<li><a href="/how-to-help">How to Help</a></li>
+							<!-- <li><a href="/how-to-help">How to Help</a></li> -->
 						</ul>
 					</div>
 				</nav>
 				<hr>
 			</section>
 
-			<section class="stay-informed section-padding wrapper center">
-				<h2 id="email">Stay Informed</h2 id="email">
 
-				<form name="email-list" action="/you-are-signed-up" netlify-honeypot="phone" netlify>
-
-					<div class="fancy stay-informed-options">
-						<label>
-							<input type="checkbox" checked name="news">
-							<span>News &amp; Updates</span>
-						</label>
-
-						<label>
-							<input type="checkbox" name="volunteer">
-							<span>Volunteer Opportunities</span>
-						</label>
-					</div>
-
-					<input type="text" name="name" placeholder="Name">
-					<input type="tel" name="phone" placeholder="Phone">
-					<input type="tel" name="ZIP" placeholder="ZIP" class="short-input" maxlength="5" pattern="[0-9]{5}" required>
-					<input type="email" name="email" placeholder="Email" required>
-
-					<button class="cta">Join List</button>
-				</form>
-			</section>
 
 			<div class="footer-contact center">
 					<!-- <a href="https://example.com/#facebook"><img src="/assets/images/facebook.svg"></a> -->
@@ -334,37 +362,6 @@
 			var statue = document.getElementById('statue');
 			statue.classList.add('load-statue')
 
-			// Cognito
-			setTimeout(function(){
-				var script1 = document.createElement('script');
-				script1.setAttribute('src', 'https://services.cognitoforms.com/s/XBMZqdgGxEOQELifmMBd4Q');
-				document.querySelector('.cognito').appendChild(script1);
-				loadCognito();
-
-				function loadCognito(){
-					if(window.Cognito){
-						var script2 = document.createElement('script');
-						script2.innerHTML = 'Cognito.load("forms", { id: "64" });';
-						document.querySelector('.cognito').appendChild(script2);
-						setTimeout(function(){
-							if(Cognito && localStorage.getItem('submittedPoll') == 'true'){
-								var input = document.querySelector('[data-field="PreviouslySubmitted"]').querySelector('input');
-								input.focus();
-								input.value = 'true';
-								Cognito.Forms.model.entry._PreviouslySubmitted = 'true';
-							}
-							document.getElementById('c-submit-button').addEventListener('click', function(){
-								localStorage.setItem('submittedPoll', true);
-							});
-						}, 2000)
-						
-					}else{
-						setTimeout(function(){
-							loadCognito();
-						}, 100);
-					}
-				}
-			}, 1000);
 		});
 			
 		
