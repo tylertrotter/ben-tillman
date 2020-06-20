@@ -228,6 +228,11 @@ cite:before {
 	padding: 0;
 }
 
+/* Rep. Todd Rutherford quote */
+.quote {
+	font-size: 1.5em;
+}
+
 .positive-quote blockquote {
 	font-size: 2em;
 }
@@ -404,9 +409,16 @@ button {
 
 [type="text"],
 [type="tel"],
-[type="email"] {
+[type="email"],
+textarea {
 	padding: 1em;
 	font-size: 16px;
+	font-family: abril-text, serif;
+}
+
+textarea {
+	width: 65.5%;
+	min-width: 335px;
 }
 
 .interest-form {
@@ -452,15 +464,16 @@ input[type="range" i] {
 	width: 5em;
 }
 
-.interest-form input {
-		margin-right: .5em;
+.interest-form input + input {
+		margin-left: .5em;
 }
 
 @media (max-width: 690px) {
 	.interest-form [type="text"],
 	.interest-form [type="tel"],
 	.interest-form [type="email"],
-	.interest-form button {
+	.interest-form button,
+	textarea {
 		padding: .5em;
 	}
 }
@@ -469,8 +482,10 @@ input[type="range" i] {
 	.interest-form [type="text"],
 	.interest-form [type="tel"],
 	.interest-form [type="email"],
-	.interest-form button {
+	.interest-form button,
+	textarea {
 		max-width: 100% !important;
+		min-width: 0;
 		width: 100% !important;
 		margin: .5em 0;
 	}
