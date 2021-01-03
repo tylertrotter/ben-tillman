@@ -203,7 +203,7 @@ hr {
 	}
 }
 
-cite {
+.quotes cite {
 	margin-left: 8vw;
 }
 
@@ -218,7 +218,7 @@ cite:before {
 		padding: 3.5em 0 0;
 	}
 
-	cite {
+	.quotes cite {
 		margin-left: 0;
 	}
 }
