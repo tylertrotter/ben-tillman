@@ -409,54 +409,49 @@ button {
 
 [type="text"],
 [type="tel"],
-[type="email"],
-textarea {
+[type="email"] {
 	padding: 1em;
 	font-size: 16px;
-	font-family: abril-text, serif;
 }
 
-textarea {
-	width: 65.5%;
-	min-width: 335px;
+.stay-informed {
+	padding-right: 4.5em;
+	padding-left: 4.5em;
 }
 
-.interest-form {
-	max-width: 810px;
-	/* padding-right: 4.5em;
-	padding-left: 4.5em; */
-}
-
-.interest-form form {
-	text-align: center;
-}
-
-@media (min-width: 450px) {
-	.interest-form form {
-		background: rgba(0, 16, 156, .5);
-		padding: 1em 2em 2em;
-	}
-}
-
-.m {
-	margin-bottom: 1em;
-}
-
-.interest-form [name="phone"] {
+.stay-informed [name="phone"] {
 	display: none;
 }
 
-.interest-form [type="range"] {
-	width: calc(100% - 100px);
-	min-width: 100px;
-	max-width: 300px;
+.stay-informed label {
+	margin-left: 1.7em;
 }
 
-input[type="range" i] {
-	color: white;
+.stay-informed label + label {
+	margin-left: 4em;
 }
 
-.interest-form input:not([type="range"]) {
+@media (max-width: 470px) {
+	.stay-informed label {
+		display: block;
+		margin-left: 1.7em !important;
+		text-align: left;
+		margin-bottom: .5em;
+	}
+}
+
+.stay-informed-options {
+	margin-bottom: 1em;
+}
+
+.stay-informed input[type="checkbox"]:not(:checked) + span:before  {
+	border-color: white !important;
+}
+.stay-informed input[type="checkbox"] + span:before  {
+	outline: 1px solid white;
+}
+
+.stay-informed input {
 	max-width: 25%;
 }
 
@@ -464,32 +459,30 @@ input[type="range" i] {
 	width: 5em;
 }
 
-.interest-form input + input {
-		margin-left: .5em;
+.stay-informed input {
+		margin-right: .5em;
 }
 
 @media (max-width: 690px) {
-	.interest-form [type="text"],
-	.interest-form [type="tel"],
-	.interest-form [type="email"],
-	.interest-form button,
-	textarea {
+	.stay-informed [type="text"],
+	.stay-informed [type="tel"],
+	.stay-informed [type="email"],
+	.stay-informed button {
 		padding: .5em;
 	}
 }
 
 @media (max-width: 560px) {
-	.interest-form [type="text"],
-	.interest-form [type="tel"],
-	.interest-form [type="email"],
-	.interest-form button,
-	textarea {
-		max-width: 100% !important;
-		min-width: 0;
-		width: 100% !important;
+	.stay-informed [type="text"],
+	.stay-informed [type="tel"],
+	.stay-informed [type="email"],
+	.stay-informed button {
+		max-width: 100%;
+		width: 100%;
 		margin: .5em 0;
 	}
 }
+
 
 [id="hamburg-cartoon"] .modal-container {
 	background: white url('images/harpers-weekly-hamburg-riot-cartoon-small.png') no-repeat center center;
@@ -903,4 +896,31 @@ figcaption {
 
 figcaption:first-child {
 	border-bottom: 1px solid #ddd;
+}
+
+.announcement {
+	background: #A90000;
+	color: white;
+	padding: 2em;
+	text-align: center;
+}
+
+.announcement h2,
+.announcement p {
+	margin: 0;
+}
+
+.announcement p {
+	font-size: 18px;
+}
+
+.announcement a {
+	color: white;
+}
+
+.protest-image {
+	background-image: url('./images/1-12-21-protest.jpg');
+	background-position: 50% 50%;
+	background-size: cover;
+	height: 60vh;
 }
